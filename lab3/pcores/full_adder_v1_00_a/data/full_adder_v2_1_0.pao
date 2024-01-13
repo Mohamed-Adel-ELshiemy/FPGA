@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          D:/ITI_internship/FPGA/lab3/pcores/full_adder_v1_00_a/data/full_adder_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Sun Dec 17 13:35:09 2023 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib full_adder_v1_00_a user_logic vhdl
+lib full_adder_v1_00_a full_adder vhdl

@@ -1,0 +1,1653 @@
+Assigned Driver axicdma 2.03.a for instance axi_cdma_0
+axi_cdma_0 has been added to the project
+ERROR:EDK:4125 - IPNAME: axi_cdma, INSTANCE: axi_cdma_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_cdma, INSTANCE: axi_cdma_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7e200000-0x7e20ffff) axi_cdma_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK - Use Push_Buttons_4Bits as reference
+INFO:EDK - Connect bus interface S_AXI_LITE to axi4lite_0
+INFO:EDK - Connect clock port s_axi_lite_aclk to clk_75_0000MHzPLL0
+INFO:EDK - Connect bus interface M_AXI to axi4_0
+INFO:EDK - Connect clock port m_axi_aclk to clk_75_0000MHzPLL0
+INFO:EDK - Set master of S0_AXI in MCB_DDR3 to microblaze_0.M_AXI_DC & microblaze_0.M_AXI_IC & axi_cdma_0.M_AXI
+INFO:EDK - External IO port grouping doneINFO:EDK - Generate address successfully
+INFO:EDK - Successfully finished auto bus connection for IP instance: axi_cdma_0
+
+Running DRCs...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ENDIANNESS value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ICACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding PARAMETER C_SUB_FAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\axi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_SYS_RST_PRESENT value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi v2.00.b... 
+Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK port is connected with clk_75_0000MHzPLL0 signal.
+ 
+INFO:EDK - 
+INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer value)/C_SCK_RATIO.
+ 
+INFO:EDK - 
+INFO: Core name                   : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: Instance name               : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: The core is instantiated in the Legacy Mode.
+ 
+INFO:EDK - 
+INFO: The AXI interface is AXI4 Lite interface.
+ 
+INFO:EDK - 
+INFO: In this mode, the core is backward compatible with the axi_quad_spi_v1_00_a core in register mapping.
+ 
+INFO:EDK - 
+INFO: This is Legacy mode of the core and 0 will not affect the core configuration.
+ 
+INFO:EDK - 
+INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+ 
+INFO:EDK - 
+INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is connected to net_vcc. 
+INFO:EDK - 
+INFO: To make the core operating in the master mode, make sure that the mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+INFO: The STARTUP primitive is not used in the AXI Quad SPI core configuration.
+ 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7e200000-0x7e20ffff) axi_cdma_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design requires design constraints to guarantee performance.
+Please refer to the data sheet for details.  
+The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation. - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addation_unit.mhs line 383
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is overriding PARAMETER C_MEMSIZE value to 0x4000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 78 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 13 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 3 master(s) : 1 slave(s) 
+
+Checking port drivers...
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_MEMCLK_PERIOD value to 3333 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi, in the present instance, the C_SCK_RATIO is set to : 2. 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK period is : 13333 ps.
+ 
+INFO:EDK - 
+INFO: User can connect the same AXI clock connected to the core to EXT_SPI_CLK port with proper C_SCK_RATIO value.
+ 
+INFO:EDK - 
+INFO: For the Winbond memories, the EXT_SPI_CLK is connected to 75000000 Hz clock source and C_SCK_RATIO is 2.
+ 
+Port present in Ethernet_Lite
+Done!
+Assigned Driver axicdma 2.03.a for instance axi_cdma_1
+axi_cdma_1 has been added to the project
+ERROR:EDK:4125 - IPNAME: axi_cdma, INSTANCE: axi_cdma_1, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_cdma, INSTANCE: axi_cdma_1, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_1 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7e200000-0x7e20ffff) axi_cdma_0	axi4lite_0
+  (0x7e220000-0x7e22ffff) axi_cdma_1	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK - Use axi_cdma_0 as reference
+INFO:EDK - Connect bus interface S_AXI_LITE to axi4lite_0
+INFO:EDK - Connect clock port s_axi_lite_aclk to clk_75_0000MHzPLL0
+INFO:EDK - Connect bus interface M_AXI to axi4_0
+INFO:EDK - Connect clock port m_axi_aclk to clk_75_0000MHzPLL0
+INFO:EDK - Set master of S0_AXI in MCB_DDR3 to microblaze_0.M_AXI_DC & microblaze_0.M_AXI_IC & axi_cdma_0.M_AXI & axi_cdma_1.M_AXI
+INFO:EDK - External IO port grouping doneINFO:EDK - Generate address successfully
+INFO:EDK - Successfully finished auto bus connection for IP instance: axi_cdma_1
+
+Running DRCs...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ENDIANNESS value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ICACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding PARAMETER C_SUB_FAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\axi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_SYS_RST_PRESENT value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi v2.00.b... 
+Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK port is connected with clk_75_0000MHzPLL0 signal.
+ 
+INFO:EDK - 
+INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer value)/C_SCK_RATIO.
+ 
+INFO:EDK - 
+INFO: Core name                   : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: Instance name               : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: The core is instantiated in the Legacy Mode.
+ 
+INFO:EDK - 
+INFO: The AXI interface is AXI4 Lite interface.
+ 
+INFO:EDK - 
+INFO: In this mode, the core is backward compatible with the axi_quad_spi_v1_00_a core in register mapping.
+ 
+INFO:EDK - 
+INFO: This is Legacy mode of the core and 0 will not affect the core configuration.
+ 
+INFO:EDK - 
+INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+ 
+INFO:EDK - 
+INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is connected to net_vcc. 
+INFO:EDK - 
+INFO: To make the core operating in the master mode, make sure that the mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+INFO: The STARTUP primitive is not used in the AXI Quad SPI core configuration.
+ 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7e200000-0x7e20ffff) axi_cdma_0	axi4lite_0
+  (0x7e220000-0x7e22ffff) axi_cdma_1	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design requires design constraints to guarantee performance.
+Please refer to the data sheet for details.  
+The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation. - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addation_unit.mhs line 383
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is overriding PARAMETER C_MEMSIZE value to 0x4000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 78 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 14 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 4 master(s) : 1 slave(s) 
+
+Checking port drivers...
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_MEMCLK_PERIOD value to 3333 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi, in the present instance, the C_SCK_RATIO is set to : 2. 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK period is : 13333 ps.
+ 
+INFO:EDK - 
+INFO: User can connect the same AXI clock connected to the core to EXT_SPI_CLK port with proper C_SCK_RATIO value.
+ 
+INFO:EDK - 
+INFO: For the Winbond memories, the EXT_SPI_CLK is connected to 75000000 Hz clock source and C_SCK_RATIO is 2.
+ 
+Port present in Ethernet_Lite
+Done!
+
+********************************************************************************
+At Local date and time: Tue Dec 19 11:57:29 2023
+ make -f fp_addation_unit.make bits started...
+"****************************************************"
+"Creating system netlist for hardware specification.."
+"****************************************************"
+platgen -p xc6slx45tfgg484-3 -lang vhdl -intstyle default    -msg __xps/ise/xmsgprops.lst fp_addation_unit.mhs
+
+Release 14.7 - platgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+Command Line: platgen -p xc6slx45tfgg484-3 -lang vhdl -intstyle default -msg
+__xps/ise/xmsgprops.lst fp_addation_unit.mhs 
+
+Parse
+D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/fp_addat
+ion_unit.mhs ...
+
+Read MPD definitions ...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ENDIANNESS value to 1 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\mic
+   roblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ICACHE_USE_FSL value to 0 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\mic
+   roblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_USE_FSL value to 0 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\mic
+   roblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to spartan6 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\da
+   ta\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding
+   PARAMETER C_BASEFAMILY value to spartan6 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\da
+   ta\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding
+   PARAMETER C_SUB_FAMILY value to spartan6 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\a
+   xi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding
+   PARAMETER C_SYS_RST_PRESENT value to 1 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\ax
+   i_s6_ddrx_v2_1_0.mpd line 239 
+INFO:EDK:4130 - IPNAME: axi_cdma, INSTANCE:axi_cdma_0 - tcl is overriding
+   PARAMETER C_INTERCONNECT_M_AXI_WRITE_ISSUING value to 8 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_cdma_v3_04_a\data\axi_c
+   dma_v2_1_0.mpd line 119 
+INFO:EDK:4130 - IPNAME: axi_cdma, INSTANCE:axi_cdma_0 - tcl is overriding
+   PARAMETER C_INTERCONNECT_M_AXI_READ_ISSUING value to 8 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_cdma_v3_04_a\data\axi_c
+   dma_v2_1_0.mpd line 117 
+INFO:EDK:4130 - IPNAME: axi_cdma, INSTANCE:axi_cdma_1 - tcl is overriding
+   PARAMETER C_INTERCONNECT_M_AXI_WRITE_ISSUING value to 8 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_cdma_v3_04_a\data\axi_c
+   dma_v2_1_0.mpd line 119 
+INFO:EDK:4130 - IPNAME: axi_cdma, INSTANCE:axi_cdma_1 - tcl is overriding
+   PARAMETER C_INTERCONNECT_M_AXI_READ_ISSUING value to 8 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_cdma_v3_04_a\data\axi_c
+   dma_v2_1_0.mpd line 117 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+   INFO:For axi_quad_spi v2.00.b... 
+   Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+   INFO: The EXT_SPI_CLK port is connected with clk_75_0000MHzPLL0 signal.
+
+INFO:EDK - 
+   INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer
+   value)/C_SCK_RATIO.
+
+INFO:EDK - 
+   INFO: Core name                   : QSPI_FLASH
+
+INFO:EDK - 
+   INFO: Instance name               : QSPI_FLASH
+
+INFO:EDK - 
+   INFO: The core is instantiated in the Legacy Mode.
+
+INFO:EDK - 
+   INFO: The AXI interface is AXI4 Lite interface.
+
+INFO:EDK - 
+   INFO: In this mode, the core is backward compatible with the
+   axi_quad_spi_v1_00_a core in register mapping.
+
+INFO:EDK - 
+   INFO: This is Legacy mode of the core and 0 will not affect the core
+   configuration.
+
+INFO:EDK - 
+   INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+
+INFO:EDK - 
+   INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is
+   connected to net_vcc. 
+INFO:EDK - 
+   INFO: To make the core operating in the master mode, make sure that the
+   mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+   INFO: The STARTUP primitive is not used in the AXI Quad SPI core
+   configuration.
+
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7e200000-0x7e20ffff) axi_cdma_0	axi4lite_0
+  (0x7e220000-0x7e22ffff) axi_cdma_1	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design
+   requires design constraints to guarantee performance.
+   Please refer to the data sheet for details.  
+   The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs
+   Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet
+   operation. -
+   D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_ad
+   dation_unit.mhs line 377
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v1
+   0_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v1
+   0_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
+   overriding PARAMETER C_MEMSIZE value to 0x4000 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bra
+   m_block_v2_1_0.mpd line 78 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 14 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 4 master(s) : 1 slave(s) 
+
+Checking port drivers...
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl -
+   tcl is overriding PARAMETER C_MASK value to 0x40000000 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\d
+   ata\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl -
+   tcl is overriding PARAMETER C_MASK value to 0x40000000 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\d
+   ata\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_D_AXI value to 1 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\mic
+   roblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ADDR_TAG_BITS value to 14 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\mic
+   roblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_ADDR_TAG value to 14 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\mic
+   roblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_BRK value to 1 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\mic
+   roblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_NM_BRK value to 1 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\mic
+   roblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 1 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\da
+   ta\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR
+checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding
+   PARAMETER C_RANGE_CHECK value to 0 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\da
+   ta\axi_interconnect_v2_1_0.mpd line 149 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding
+   PARAMETER C_MEMCLK_PERIOD value to 3333 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\ax
+   i_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding
+   PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\ax
+   i_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding
+   PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\ax
+   i_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding
+   PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\ax
+   i_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding
+   PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\ax
+   i_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding
+   PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\ax
+   i_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding
+   PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F -
+   E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\ax
+   i_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+INFO:EDK - 
+   INFO:For axi_quad_spi, in the present instance, the C_SCK_RATIO is set to :
+   2. 
+INFO:EDK - 
+   INFO: The EXT_SPI_CLK period is : 13333 ps.
+
+INFO:EDK - 
+   INFO: User can connect the same AXI clock connected to the core to
+   EXT_SPI_CLK port with proper C_SCK_RATIO value.
+
+INFO:EDK - 
+   INFO: For the Winbond memories, the EXT_SPI_CLK is connected to 75000000 Hz
+   clock source and C_SCK_RATIO is 2.
+
+Port present in Ethernet_Lite
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: Setting timing constaints for microblaze_0_ilmb.
+INFO: The microblaze_0_ilmb core has constraints automatically generated by XPS
+in implementation/microblaze_0_ilmb_wrapper/microblaze_0_ilmb_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: Setting timing constaints for microblaze_0_dlmb.
+INFO: The microblaze_0_dlmb core has constraints automatically generated by XPS
+in implementation/microblaze_0_dlmb_wrapper/microblaze_0_dlmb_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: Setting timing constaints for microblaze_0.
+INFO: The microblaze_0 core has constraints automatically generated by XPS in
+implementation/microblaze_0_wrapper/microblaze_0_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: No asynchronous clock conversions in axi_interconnect axi4lite_0.
+INFO: No asynchronous clock conversions in axi_interconnect axi4_0.
+INFO: The SysACE_CompactFlash core has constraints automatically generated by
+XPS in
+implementation/sysace_compactflash_wrapper/sysace_compactflash_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO:EDK - 
+   INFO:The EXT_SPI_CLK  = clk_75_0000MHzPLL0 and  S_AXI_ACLK =
+   clk_75_0000MHzPLL0 are connected to the same source of clock. 
+INFO:EDK - 
+   INFO:The EXT_SPI_CLK  = clk_75_0000MHzPLL0 and  S_AXI_ACLK =
+   clk_75_0000MHzPLL0 are connected to the same source of clock. 
+INFO: Forcing parameter C_SIMULATION = "FALSE" in IP axi_s6_ddrx.
+INFO: The Ethernet_Lite core has constraints automatically generated by XPS in
+implementation/ethernet_lite_wrapper/ethernet_lite_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The Ethernet_Lite core has constraints automatically generated by XPS in
+implementation/ethernet_lite_wrapper/ethernet_lite_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: No clock crossing in axi_cdma_0.
+INFO: No clock crossing in axi_cdma_1.
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+IPNAME:axi_quad_spi INSTANCE:qspi_flash -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 243 - Copying (BBD-specified) netlist files.
+
+Managing cache ...
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 117 - elaborating IP
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 164 - elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 1.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 0.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:proc_sys_reset_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 72 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_ilmb -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 85 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_i_bram_ctrl -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 92 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_dlmb -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 101 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_d_bram_ctrl -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 108 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_bram_block -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 117 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 124 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:debug_module -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 151 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:clock_generator_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 164 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:axi_timer_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 185 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:axi4lite_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 196 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:axi4_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 204 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:sysace_compactflash -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 211 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:rs232_uart_1 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 228 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:qspi_flash -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 243 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:push_buttons_4bits -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 263 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:mcb_ddr3 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 277 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:leds_4bits -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 324 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:iic_sfp -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 338 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:iic_eeprom -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 351 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:iic_dvi -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 364 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:ethernet_lite -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 377 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:dip_switches_4bits -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 398 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:axi_cdma_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 412 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:axi_cdma_1 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 423 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Running NGCBUILD ...
+IPNAME:fp_addation_unit_microblaze_0_ilmb_wrapper INSTANCE:microblaze_0_ilmb -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 85 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_microblaze_0_ilmb_wrapper.ngc
+../fp_addation_unit_microblaze_0_ilmb_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/microblaze_0_ilmb_wrapper/fp_addation_unit_microblaze_0_ilmb_wrapper.ngc
+" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_microblaze_0_ilmb_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_microblaze_0_ilmb_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_microblaze_0_dlmb_wrapper INSTANCE:microblaze_0_dlmb -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 101 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_microblaze_0_dlmb_wrapper.ngc
+../fp_addation_unit_microblaze_0_dlmb_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/microblaze_0_dlmb_wrapper/fp_addation_unit_microblaze_0_dlmb_wrapper.ngc
+" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_microblaze_0_dlmb_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_microblaze_0_dlmb_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_microblaze_0_wrapper INSTANCE:microblaze_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 124 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_microblaze_0_wrapper.ngc
+../fp_addation_unit_microblaze_0_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/microblaze_0_wrapper/fp_addation_unit_microblaze_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_microblaze_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  5 sec
+Total CPU time to NGCBUILD completion:   5 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_microblaze_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 164 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_clock_generator_0_wrapper.ngc
+../fp_addation_unit_clock_generator_0_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/clock_generator_0_wrapper/fp_addation_unit_clock_generator_0_wrapper.ngc
+" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_clock_generator_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_clock_generator_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 196 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_axi4lite_0_wrapper.ngc ../fp_addation_unit_axi4lite_0_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/axi4lite_0_wrapper/fp_addation_unit_axi4lite_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_axi4lite_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_axi4lite_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_axi4_0_wrapper INSTANCE:axi4_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 204 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd .. fp_addation_unit_axi4_0_wrapper.ngc
+../fp_addation_unit_axi4_0_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/axi4_0_wrapper/fp_addation_unit_axi4_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_axi4_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_axi4_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_qspi_flash_wrapper INSTANCE:qspi_flash -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 243 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_qspi_flash_wrapper.ngc ../fp_addation_unit_qspi_flash_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/qspi_flash_wrapper/fp_addation_unit_qspi_flash_wrapper.ngc" ...
+Loading design module
+"../fp_addation_unit_qspi_flash_wrapper_fifo_generator_v9_3.ngc"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_qspi_flash_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_qspi_flash_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_mcb_ddr3_wrapper INSTANCE:mcb_ddr3 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 277 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_mcb_ddr3_wrapper.ngc ../fp_addation_unit_mcb_ddr3_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/mcb_ddr3_wrapper/fp_addation_unit_mcb_ddr3_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_mcb_ddr3_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_mcb_ddr3_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_ethernet_lite_wrapper INSTANCE:ethernet_lite -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 377 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_ethernet_lite_wrapper.ngc
+../fp_addation_unit_ethernet_lite_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/ethernet_lite_wrapper/fp_addation_unit_ethernet_lite_wrapper.ngc" ...
+Loading design module
+"../fp_addation_unit_ethernet_lite_wrapper_blk_mem_gen_v7_3.ngc"...
+Loading design module
+"../fp_addation_unit_ethernet_lite_wrapper_fifo_generator_v9_3.ngc"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_ethernet_lite_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_ethernet_lite_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_axi_cdma_0_wrapper INSTANCE:axi_cdma_0 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 412 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_axi_cdma_0_wrapper.ngc ../fp_addation_unit_axi_cdma_0_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/axi_cdma_0_wrapper/fp_addation_unit_axi_cdma_0_wrapper.ngc" ...
+Loading design module
+"../fp_addation_unit_axi_cdma_0_wrapper_fifo_generator_v9_3.ngc"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_axi_cdma_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_axi_cdma_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:fp_addation_unit_axi_cdma_1_wrapper INSTANCE:axi_cdma_1 -
+D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\fp_addat
+ion_unit.mhs line 423 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc6slx45tfgg484-3 -intstyle silent -i -sd ..
+fp_addation_unit_axi_cdma_1_wrapper.ngc ../fp_addation_unit_axi_cdma_1_wrapper
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/axi_cdma_1_wrapper/fp_addation_unit_axi_cdma_1_wrapper.ngc" ...
+Loading design module
+"../fp_addation_unit_axi_cdma_1_wrapper_fifo_generator_v9_3.ngc"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../fp_addation_unit_axi_cdma_1_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  4 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../fp_addation_unit_axi_cdma_1_wrapper.blc"...
+
+NGCBUILD done.
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/fp_addation_unit.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 1230.00 seconds
+"Running synthesis..."
+cd synthesis & synthesis.cmd
+"xst -ifn "fp_addation_unit_xst.scr" -intstyle silent"
+"Running XST synthesis ..."
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+"XST completed"
+"*********************************************"
+"Running Xilinx Implementation tools.."
+"*********************************************"
+xflow -wd implementation -p xc6slx45tfgg484-3 -implement xflow.opt fp_addation_unit.ngc
+Release 14.7 - Xflow P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc6slx45tfgg484-3 -implement xflow.opt
+fp_addation_unit.ngc  
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+.... Copying flowfile E:/14.7/ISE_DS/ISE/xilinx/data/fpga.flw into working
+directory
+D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/implemen
+tation 
+
+Using Flow File:
+D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/implemen
+tation/fpga.flw 
+Using Option File(s): 
+ D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/xflow.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc6slx45tfgg484-3 -nt timestamp -bm fp_addation_unit.bmm
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit.ngc" -uc fp_addation_unit.ucf fp_addation_unit.ngd 
+#----------------------------------------------#
+Release 14.7 - ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd>
+with local file <E:/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
+xc6slx45tfgg484-3 -nt timestamp -bm fp_addation_unit.bmm
+D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/implemen
+tation/fp_addation_unit.ngc -uc fp_addation_unit.ucf fp_addation_unit.ngd
+
+Reading NGO file
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit.ngc" ...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_push_buttons_4bits_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_ethernet_lite_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_dip_switches_4bits_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_sysace_compactflash_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_rs232_uart_1_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_proc_sys_reset_0_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_clock_generator_0_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_ilmb_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_dlmb_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_mcb_ddr3_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_axi4lite_0_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_axi4_0_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_i_bram_ctrl_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_d_bram_ctrl_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_debug_module_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_axi_timer_0_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_qspi_flash_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_leds_4bits_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_iic_sfp_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_iic_eeprom_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_iic_dvi_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_axi_cdma_0_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_axi_cdma_1_wrapper.ngc"...
+Loading design module
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_bram_block_wrapper.ngc"...
+Applying constraints in
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_ethernet_lite_wrapper.ncf" to module "Ethernet_Lite"...
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6.000 BEFORE 
+   "PHY_rx_clk";>
+   [D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impl
+   ementation/fp_addation_unit_ethernet_lite_wrapper.ncf(4)], is specified
+   without a duration.  This will result in a lack of hold time checks in timing
+   reports.  If hold time checks are desired a duration value should be
+   specified following the 'VALID' keyword.
+
+Checking Constraint Associations...
+Applying constraints in
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_sysace_compactflash_wrapper.ncf" to module
+"SysACE_CompactFlash"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_ilmb_wrapper.ncf" to module
+"microblaze_0_ilmb"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_dlmb_wrapper.ncf" to module
+"microblaze_0_dlmb"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_mcb_ddr3_wrapper.ncf" to module "MCB_DDR3"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_axi4lite_0_wrapper.ncf" to module "axi4lite_0"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_axi4_0_wrapper.ncf" to module "axi4_0"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/ITI_internship/FPGA/final_project/fp_adder_in_xilinx_platform_studio/impleme
+ntation/fp_addation_unit_microblaze_0_wrapper.ncf" to module "microblaze_0"...
+Checking Constraint Associations...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "fp_addation_unit.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:135 - Constraint <INST
+   /fp_addation_unit/EXPANDED/fp_addation_unit/axi4_0/axi4_0\/si_converter_bank\
+   /gen_conv_slot[0].clock_conv_inst\/interconnect_aresetn_resync<2>_inv1_INV_0
+   TNM = FFS:axi4_0_reset_resync>: No instances of type FFS were found under
+   block
+   "axi4_0/axi4_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync<2>_inv1_INV_0" (type=INV).
+
+WARNING:ConstraintSystem:135 - Constraint <INST
+   /fp_addation_unit/EXPANDED/fp_addation_unit/axi4lite_0/axi4lite_0\/si_convert
+   er_bank\/gen_conv_slot[0].clock_conv_inst\/interconnect_aresetn_resync<2>_inv
+   1_INV_0 TNM = FFS:axi4lite_0_reset_resync>: No instances of type FFS were
+   found under block
+   "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync<2>_inv1_INV_0" (type=INV).
+
+WARNING:ConstraintSystem:168 - Constraint <OFFSET = IN 1000.000000000 pS VALID
+   3000.000000000 pS BEFORE SysACE_CompactFlash/SysACE_CLK RISING;>: This
+   constraint will be ignored because NET "SysACE_CompactFlash/SysACE_CLK" could
+   not be found or was not connected to a PAD.
+
+WARNING:ConstraintSystem:168 - Constraint <OFFSET = OUT 9000.000000000 pS AFTER
+   SysACE_CompactFlash/SysACE_CLK;>: This constraint will be ignored because NET
+   "SysACE_CompactFlash/SysACE_CLK" could not be found or was not connected to a
+   PAD.
+
+WARNING:ConstraintSystem:58 - Constraint <TIMEGRP axi4lite_0_reset_source = FFS
+   PADS CPUS;>: CPUS "*" does not match any design objects.
+
+WARNING:ConstraintSystem:58 - Constraint <TIMEGRP axi4_0_reset_source = FFS PADS
+   CPUS;>: CPUS "*" does not match any design objects.
+
+WARNING:ConstraintSystem:194 - The TNM 'axi4_0_reset_resync', does not directly
+   or indirectly drive any flip-flops, latches and/or RAMs and is not actively
+   used by any referencing constraint.
+
+WARNING:ConstraintSystem:194 - The TNM 'axi4lite_0_reset_resync', does not
+   directly or indirectly drive any flip-flops, latches and/or RAMs and is not
+   actively used by any referencing constraint.
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_clk_600_0000MHz180PLL0_nobuf = PERIOD
+   "clk_600_0000MHz180PLL0_nobuf" TS_sys_clk_pin * 3 PHASE 0.833333333 ns HIGH
+   50>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clk_600_0000MHzPLL0_nobuf = PERIOD
+   "clk_600_0000MHzPLL0_nobuf" TS_sys_clk_pin * 3 HIGH 50>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2" TS_sys_clk_pin
+   * 0.375 HIGH 50>
+
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6000.000000000 pS
+   BEFORE Ethernet_Lite/PHY_rx_clk;>, is specified without a duration.  This
+   will result in a lack of hold time checks in timing reports.  If hold time
+   checks are desired a duration value should be specified following the 'VALID'
+   keyword.
+
+Done...
+
+Processing BMM file "fp_addation_unit.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_Lite/Ethernet_Lite/XEMAC_I/EMAC_I/COLLISION_SYNC_2' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.
+   Gen_Bits[27].MEM_EX_Result_Inst' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_
+   0_GEN.SPI_MODULE_I/SCK_I_REG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_
+   0_GEN.SPI_MODULE_I/MST_TRANS_INHIBIT_D1_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.C
+   LK_CROSS_I/RX_FIFO_FULL_SYNC_SPI_2_AXI_2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.C
+   LK_CROSS_I/SPIXFER_DONE_S2AX_2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.C
+   LK_CROSS_I/TX_FIFO_FULL_AX2S_2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.C
+   LK_CROSS_I/TX_FIFO_EMPTY_S2AX_2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.C
+   LK_CROSS_I/RX_FIFO_EMPTY_AX2S_2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.C
+   LK_CROSS_I/SPICR_6_RXFIFO_RST_AX2S_2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'QSPI_FLASH/QSPI_FLASH/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.C
+   LK_CROSS_I/SPICR_5_TXFIFO_AX2S_2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'IIC_SFP/IIC_SFP/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/FF_WRACK' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'IIC_EEPROM/IIC_EEPROM/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/FF_WRACK' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'IIC_DVI/IIC_DVI/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/FF_WRACK' has unconnected
+   output pin
+WARNING:NgdBuild:452 - logical net 'N43' has no driver
+WARNING:NgdBuild:452 - logical net 'N44' has no driver
+WARNING:NgdBuild:452 - logical net 'N45' has no driver
+WARNING:NgdBuild:452 - logical net 'N46' has no driver
+WARNING:NgdBuild:452 - logical net 'N47' has no driver
+WARNING:NgdBuild:452 - logical net 'N48' has no driver
+WARNING:NgdBuild:452 - logical net 'N49' has no driver
+WARNING:NgdBuild:452 - logical net 'N50' has no driver
+WARNING:NgdBuild:452 - logical net 'N51' has no driver
+WARNING:NgdBuild:452 - logical net 'N52' has no driver
+WARNING:NgdBuild:452 - logical net 'N53' has no driver
+WARNING:NgdBuild:452 - logical net 'N54' has no driver
+WARNING:NgdBuild:452 - logical net 'N55' has no driver
+WARNING:NgdBuild:452 - logical net 'N56' has no driver
+WARNING:NgdBuild:452 - logical net 'N57' has no driver
+WARNING:NgdBuild:452 - logical net 'N58' has no driver
+WARNING:NgdBuild:452 - logical net 'N67' has no driver
+WARNING:NgdBuild:452 - logical net 'N68' has no driver
+WARNING:NgdBuild:452 - logical net 'N69' has no driver
+WARNING:NgdBuild:452 - logical net 'N70' has no driver
+WARNING:NgdBuild:452 - logical net 'N71' has no driver
+WARNING:NgdBuild:452 - logical net 'N72' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  46
+
+Writing NGD file "fp_addation_unit.ngd" ...
+Total REAL time to NGDBUILD completion: 1 min  33 sec
+Total CPU time to NGDBUILD completion:  1 min  29 sec
+
+Writing NGDBUILD log file "fp_addation_unit.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o fp_addation_unit_map.ncd -w -pr b -ol high -timing -detail
+fp_addation_unit.ngd fp_addation_unit.pcf 
+#----------------------------------------------#
+Release 14.7 - Map P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <E:/14.7/ISE_DS/EDK/data/Xdh_PrimTypeLib.xda>
+with local file <E:/14.7/ISE_DS/ISE/data/Xdh_PrimTypeLib.xda>
+Using target part "6slx45tfgg484-3".
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal SysACE_MPIRQ connected to top level port
+   SysACE_MPIRQ has been removed.
+WARNING:MapLib:701 - Signal Ethernet_Lite_COL connected to top level port
+   Ethernet_Lite_COL has been removed.
+Writing file fp_addation_unit_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+WARNING:Timing:3223 - Timing constraint PATH "TS_TIG_MCB_DDR3_CALIB_DONE_SYNCH_path" TIG ignored during timing analysis.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 50 secs 
+Total CPU  time at the beginning of Placer: 46 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:fb8e4ec6) REAL time: 55 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:fb8e4ec6) REAL time: 56 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:be6810d9) REAL time: 56 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:84500a0e) REAL time: 1 mins 37 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:84500a0e) REAL time: 1 mins 37 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:84500a0e) REAL time: 1 mins 37 secs 
+
+Phase 7.3  Local Placement Optimization
+Phase 7.3  Local Placement Optimization (Checksum:84500a0e) REAL time: 1 mins 37 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:84500a0e) REAL time: 1 mins 37 secs 
+
+Phase 9.8  Global Placement
+...............................
+................................................................................................................
+.............................................................................................................................
+.......................................................................................................
+..................
+Phase 9.8  Global Placement (Checksum:b75c25b3) REAL time: 4 mins 36 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:b75c25b3) REAL time: 4 mins 36 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:7731c7c6) REAL time: 5 mins 2 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:7731c7c6) REAL time: 5 mins 2 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:71379b7c) REAL time: 5 mins 3 secs 
+
+Trying to terminate Process...
+Writing filter settings....
+Done writing filter settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\fp_addation_unit.filters
+Done writing Tab View settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\fp_addation_unit.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Assigned Driver fp_adder 1.00.a for instance fp_adder_0
+fp_adder_0 has been added to the project
+WARNING:EDK:2137 - Peripheral fp_adder_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0x7e200000-0x7e20ffff) axi_cdma_0	axi4lite_0
+  (0x7e220000-0x7e22ffff) axi_cdma_1	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK - Use Push_Buttons_4Bits as reference
+INFO:EDK - Connect bus interface S_AXI to axi4lite_0
+INFO:EDK - Connect clock port S_AXI_ACLK to clk_75_0000MHzPLL0
+INFO:EDK - External IO port grouping doneINFO:EDK - Generate address successfully
+INFO:EDK - Successfully finished auto bus connection for IP instance: fp_adder_0
+Writing filter settings....
+Done writing filter settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\fp_addation_unit.filters
+Done writing Tab View settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\fp_addation_unit.gui

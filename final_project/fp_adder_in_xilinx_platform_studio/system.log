@@ -1,0 +1,1160 @@
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Writing filter settings....
+Done writing filter settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\system.filters
+Done writing Tab View settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\system.gui
+Assigned Driver fp_adder 1.00.a for instance fp_adder_0
+fp_adder_0 has been added to the project
+WARNING:EDK:2137 - Peripheral fp_adder_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK - Use Push_Buttons_4Bits as reference
+INFO:EDK - Connect bus interface S_AXI to axi4lite_0
+INFO:EDK - Connect clock port S_AXI_ACLK to clk_50_0000MHzPLL0
+INFO:EDK - External IO port grouping doneINFO:EDK - Generate address successfully
+INFO:EDK - Successfully finished auto bus connection for IP instance: fp_adder_0
+
+Running DRCs...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ENDIANNESS value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ICACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding PARAMETER C_SUB_FAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\axi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_SYS_RST_PRESENT value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi v2.00.b... 
+Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK port is connected with clk_50_0000MHzPLL0 signal.
+ 
+INFO:EDK - 
+INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer value)/C_SCK_RATIO.
+ 
+INFO:EDK - 
+INFO: Core name                   : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: Instance name               : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: The core is instantiated in the Legacy Mode.
+ 
+INFO:EDK - 
+INFO: The AXI interface is AXI4 Lite interface.
+ 
+INFO:EDK - 
+INFO: In this mode, the core is backward compatible with the axi_quad_spi_v1_00_a core in register mapping.
+ 
+INFO:EDK - 
+INFO: This is Legacy mode of the core and 0 will not affect the core configuration.
+ 
+INFO:EDK - 
+INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+ 
+INFO:EDK - 
+INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is connected to net_vcc. 
+INFO:EDK - 
+INFO: To make the core operating in the master mode, make sure that the mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+INFO: The STARTUP primitive is not used in the AXI Quad SPI core configuration.
+ 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design requires design constraints to guarantee performance.
+Please refer to the data sheet for details.  
+The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation. - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\system.mhs line 380
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is overriding PARAMETER C_MEMSIZE value to 0x4000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 78 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 13 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 2 master(s) : 1 slave(s) 
+
+Checking port drivers...
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_MEMCLK_PERIOD value to 3333 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi, in the present instance, the C_SCK_RATIO is set to : 2. 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK period is : 20000 ps.
+ 
+INFO:EDK - 
+INFO: User can connect the same AXI clock connected to the core to EXT_SPI_CLK port with proper C_SCK_RATIO value.
+ 
+INFO:EDK - 
+INFO: For the Winbond memories, the EXT_SPI_CLK is connected to 50000000 Hz clock source and C_SCK_RATIO is 2.
+ 
+Port present in Ethernet_Lite
+Done!
+
+Running DRCs...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ENDIANNESS value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ICACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding PARAMETER C_SUB_FAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\axi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_SYS_RST_PRESENT value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi v2.00.b... 
+Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK port is connected with clk_50_0000MHzPLL0 signal.
+ 
+INFO:EDK - 
+INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer value)/C_SCK_RATIO.
+ 
+INFO:EDK - 
+INFO: Core name                   : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: Instance name               : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: The core is instantiated in the Legacy Mode.
+ 
+INFO:EDK - 
+INFO: The AXI interface is AXI4 Lite interface.
+ 
+INFO:EDK - 
+INFO: In this mode, the core is backward compatible with the axi_quad_spi_v1_00_a core in register mapping.
+ 
+INFO:EDK - 
+INFO: This is Legacy mode of the core and 0 will not affect the core configuration.
+ 
+INFO:EDK - 
+INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+ 
+INFO:EDK - 
+INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is connected to net_vcc. 
+INFO:EDK - 
+INFO: To make the core operating in the master mode, make sure that the mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+INFO: The STARTUP primitive is not used in the AXI Quad SPI core configuration.
+ 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design requires design constraints to guarantee performance.
+Please refer to the data sheet for details.  
+The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation. - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\system.mhs line 380
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is overriding PARAMETER C_MEMSIZE value to 0x4000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 78 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 13 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 2 master(s) : 1 slave(s) 
+
+Checking port drivers...
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_MEMCLK_PERIOD value to 3333 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi, in the present instance, the C_SCK_RATIO is set to : 2. 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK period is : 20000 ps.
+ 
+INFO:EDK - 
+INFO: User can connect the same AXI clock connected to the core to EXT_SPI_CLK port with proper C_SCK_RATIO value.
+ 
+INFO:EDK - 
+INFO: For the Winbond memories, the EXT_SPI_CLK is connected to 50000000 Hz clock source and C_SCK_RATIO is 2.
+ 
+Port present in Ethernet_Lite
+Done!
+Deleting Internal port proc_sys_reset_0:MB_Debug_Sys_Rst 
+Deleting Internal port debug_module:Debug_SYS_Rst 
+Deleting Internal port proc_sys_reset_0:MB_Reset 
+Deleting Internal port microblaze_0:MB_RESET 
+proc_sys_reset_0 has been deleted from the project
+Deleting Internal port clock_generator_0:LOCKED 
+Deleting Internal port MCB_DDR3:PLL_LOCK 
+Deleting External port : RESET 
+Deleting Internal port clock_generator_0:RST 
+Deleting Internal port clock_generator_0:CLKOUT0 
+Deleting Internal port MCB_DDR3:sysclk_2x 
+Deleting Internal port clock_generator_0:CLKOUT1 
+Deleting Internal port MCB_DDR3:sysclk_2x_180 
+clock_generator_0 has been deleted from the project
+fp_adder_0 has been deleted from the project
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK - UCF file has reference to the following nonexistent external port(s), please revise UCF file.
+   RESET
+Assigned Driver fp_adder 1.00.a for instance fp_adder_0
+fp_adder_0 has been added to the project
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral fp_adder_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+INFO:EDK - Use Push_Buttons_4Bits as reference
+INFO:EDK - Connect bus interface S_AXI to axi4lite_0
+INFO:EDK - Connect clock port S_AXI_ACLK to clk_50_0000MHzPLL0
+INFO:EDK - Create new proc_sys_reset IP instance fp_adder_0_reset_1
+INFO:EDK - External IO port grouping doneINFO:EDK - Generate address successfully
+INFO:EDK - Successfully finished auto bus connection for IP instance: fp_adder_0
+
+Running DRCs...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ENDIANNESS value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ICACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding PARAMETER C_SUB_FAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\axi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_SYS_RST_PRESENT value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:3715 - IPNAME: fp_adder, INSTANCE: fp_adder_0 - Tools are unable to determine the clock frequency of the bus interface S_AXI by tracing the clock ports. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC to '1'. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi v2.00.b... 
+Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK port is connected with clk_50_0000MHzPLL0 signal.
+ 
+INFO:EDK - 
+INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer value)/C_SCK_RATIO.
+ 
+INFO:EDK - 
+INFO: Core name                   : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: Instance name               : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: The core is instantiated in the Legacy Mode.
+ 
+INFO:EDK - 
+INFO: The AXI interface is AXI4 Lite interface.
+ 
+INFO:EDK - 
+INFO: In this mode, the core is backward compatible with the axi_quad_spi_v1_00_a core in register mapping.
+ 
+INFO:EDK - 
+INFO: This is Legacy mode of the core and 0 will not affect the core configuration.
+ 
+INFO:EDK - 
+INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+ 
+INFO:EDK - 
+INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is connected to net_vcc. 
+INFO:EDK - 
+INFO: To make the core operating in the master mode, make sure that the mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+INFO: The STARTUP primitive is not used in the AXI Quad SPI core configuration.
+ 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design requires design constraints to guarantee performance.
+Please refer to the data sheet for details.  
+The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation. - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\system.mhs line 380
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is overriding PARAMETER C_MEMSIZE value to 0x4000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 78 
+Error in overriding syslevel props. 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 13 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 2 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: CLK_P, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\_xps_tempmhsfilename.mhs line 58 
+WARNING:EDK:4181 - PORT: CLK_N, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\_xps_tempmhsfilename.mhs line 59 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_MEMCLK_PERIOD value to 3333 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mdm_v2_10_a::check_syslevel_settings" line 9
+debug_module (mdm) - To be able to reset the system from the debugger, connect the PORT Debug_SYS_Rst in debug_module to the PORT MB_Debug_SYS_Rst in proc_sys_reset 
+INFO:EDK - 
+INFO:For axi_quad_spi, in the present instance, the C_SCK_RATIO is set to : 2. 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK period is : 20000 ps.
+ 
+INFO:EDK - 
+INFO: User can connect the same AXI clock connected to the core to EXT_SPI_CLK port with proper C_SCK_RATIO value.
+ 
+INFO:EDK - 
+INFO: For the Winbond memories, the EXT_SPI_CLK is connected to 50000000 Hz clock source and C_SCK_RATIO is 2.
+ 
+Port present in Ethernet_Lite
+
+Running DRCs...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ENDIANNESS value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ICACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding PARAMETER C_SUB_FAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\axi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_SYS_RST_PRESENT value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:3715 - IPNAME: fp_adder, INSTANCE: fp_adder_0 - Tools are unable to determine the clock frequency of the bus interface S_AXI by tracing the clock ports. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC to '1'. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi v2.00.b... 
+Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK port is connected with clk_50_0000MHzPLL0 signal.
+ 
+INFO:EDK - 
+INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer value)/C_SCK_RATIO.
+ 
+INFO:EDK - 
+INFO: Core name                   : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: Instance name               : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: The core is instantiated in the Legacy Mode.
+ 
+INFO:EDK - 
+INFO: The AXI interface is AXI4 Lite interface.
+ 
+INFO:EDK - 
+INFO: In this mode, the core is backward compatible with the axi_quad_spi_v1_00_a core in register mapping.
+ 
+INFO:EDK - 
+INFO: This is Legacy mode of the core and 0 will not affect the core configuration.
+ 
+INFO:EDK - 
+INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+ 
+INFO:EDK - 
+INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is connected to net_vcc. 
+INFO:EDK - 
+INFO: To make the core operating in the master mode, make sure that the mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+INFO: The STARTUP primitive is not used in the AXI Quad SPI core configuration.
+ 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design requires design constraints to guarantee performance.
+Please refer to the data sheet for details.  
+The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation. - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\system.mhs line 380
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is overriding PARAMETER C_MEMSIZE value to 0x4000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 78 
+Error in overriding syslevel props. 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 13 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 2 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: CLK_P, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\_xps_tempmhsfilename.mhs line 58 
+WARNING:EDK:4181 - PORT: CLK_N, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\_xps_tempmhsfilename.mhs line 59 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_MEMCLK_PERIOD value to 3333 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mdm_v2_10_a::check_syslevel_settings" line 9
+debug_module (mdm) - To be able to reset the system from the debugger, connect the PORT Debug_SYS_Rst in debug_module to the PORT MB_Debug_SYS_Rst in proc_sys_reset 
+INFO:EDK - 
+INFO:For axi_quad_spi, in the present instance, the C_SCK_RATIO is set to : 2. 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK period is : 20000 ps.
+ 
+INFO:EDK - 
+INFO: User can connect the same AXI clock connected to the core to EXT_SPI_CLK port with proper C_SCK_RATIO value.
+ 
+INFO:EDK - 
+INFO: For the Winbond memories, the EXT_SPI_CLK is connected to 50000000 Hz clock source and C_SCK_RATIO is 2.
+ 
+Port present in Ethernet_Lite
+Writing filter settings....
+Done writing filter settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\system.filters
+Done writing Tab View settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+
+Running DRCs...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ENDIANNESS value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ICACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding PARAMETER C_SUB_FAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\axi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_SYS_RST_PRESENT value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:1039 - Did not update the value for parameter: microblaze_0:C_FREQ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: RS232_Uart_1:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: IIC_SFP:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: IIC_EEPROM:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: IIC_DVI:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: Ethernet_Lite:C_S_AXI_ACLK_PERIOD_PS. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_M_AXI_DP_IS_ACLK_ASYNC on core microblaze_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core debug_module to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core axi_timer_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core SysACE_CompactFlash to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core RS232_Uart_1 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core QSPI_FLASH to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core Push_Buttons_4Bits to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core LEDs_4Bits to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core IIC_SFP to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core IIC_EEPROM to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core IIC_DVI to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core Ethernet_Lite to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core DIP_Switches_4Bits to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core fp_adder_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_M_AXI_DC_IS_ACLK_ASYNC on core microblaze_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_M_AXI_IC_IS_ACLK_ASYNC on core microblaze_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S0_AXI_IS_ACLK_ASYNC on core MCB_DDR3 to '1'. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi v2.00.b... 
+Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK port is connected with clk_50_0000MHzPLL0 signal.
+ 
+INFO:EDK - 
+INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer value)/C_SCK_RATIO.
+ 
+INFO:EDK - 
+INFO: Core name                   : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: Instance name               : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: The core is instantiated in the Legacy Mode.
+ 
+INFO:EDK - 
+INFO: The AXI interface is AXI4 Lite interface.
+ 
+INFO:EDK - 
+INFO: In this mode, the core is backward compatible with the axi_quad_spi_v1_00_a core in register mapping.
+ 
+INFO:EDK - 
+INFO: This is Legacy mode of the core and 0 will not affect the core configuration.
+ 
+INFO:EDK - 
+INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+ 
+INFO:EDK - 
+INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is connected to net_vcc. 
+INFO:EDK - 
+INFO: To make the core operating in the master mode, make sure that the mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+INFO: The STARTUP primitive is not used in the AXI Quad SPI core configuration.
+ 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design requires design constraints to guarantee performance.
+Please refer to the data sheet for details.  
+The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation. - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\system.mhs line 338
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is overriding PARAMETER C_MEMSIZE value to 0x4000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 78 
+Error in overriding syslevel props. 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 13 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 2 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: CLK_P, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\_xps_tempmhsfilename.mhs line 58 
+WARNING:EDK:4181 - PORT: CLK_N, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\_xps_tempmhsfilename.mhs line 59 
+
+Performing Clock DRCs...
+INFO:EDK:4060 - INSTANCE: microblaze_0, PARAMETER: C_FREQ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: RS232_Uart_1, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_SFP, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_EEPROM, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_DVI, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: Ethernet_Lite, PARAMETER: C_S_AXI_ACLK_PERIOD_PS - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+ERROR:EDK - C_MEMCLK_PERIOD (IPNAME:axi_s6_ddrx, INSTANCE:MCB_DDR3) - can't use empty string as operand of "/" 
+ERROR:EDK:4114 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3 - error computing override value for C_MEMCLK_PERIOD using tcl - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 162 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running DRCs...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ENDIANNESS value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ICACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_USE_FSL value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_BASEFAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_quad_spi, INSTANCE:QSPI_FLASH - tcl is overriding PARAMETER C_SUB_FAMILY value to spartan6 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_quad_spi_v2_00_b\data\axi_quad_spi_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_SYS_RST_PRESENT value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port : microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this core and cores connected to it. 
+INFO:EDK:1039 - Did not update the value for parameter: microblaze_0:C_FREQ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: RS232_Uart_1:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: IIC_SFP:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: IIC_EEPROM:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: IIC_DVI:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter: Ethernet_Lite:C_S_AXI_ACLK_PERIOD_PS. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_M_AXI_DP_IS_ACLK_ASYNC on core microblaze_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core debug_module to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core axi_timer_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core SysACE_CompactFlash to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core RS232_Uart_1 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core QSPI_FLASH to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core Push_Buttons_4Bits to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core LEDs_4Bits to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core IIC_SFP to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core IIC_EEPROM to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core IIC_DVI to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core Ethernet_Lite to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core DIP_Switches_4Bits to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4lite_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC on core fp_adder_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_M_AXI_DC_IS_ACLK_ASYNC on core microblaze_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_M_AXI_IC_IS_ACLK_ASYNC on core microblaze_0 to '1'. 
+INFO:EDK:3707 - Frequency of the clock port of the interconnect 'axi4_0' could not be determined. Tools are updating the value of the parameter C_INTERCONNECT_S0_AXI_IS_ACLK_ASYNC on core MCB_DDR3 to '1'. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - 
+INFO:For axi_quad_spi v2.00.b... 
+Checking the C_SCK_RATIO parameter... 
+INFO:EDK - 
+INFO: The EXT_SPI_CLK port is connected with clk_50_0000MHzPLL0 signal.
+ 
+INFO:EDK - 
+INFO: The actual SPI clock from the core will be EXT_SPI_CLK(integer value)/C_SCK_RATIO.
+ 
+INFO:EDK - 
+INFO: Core name                   : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: Instance name               : QSPI_FLASH
+ 
+INFO:EDK - 
+INFO: The core is instantiated in the Legacy Mode.
+ 
+INFO:EDK - 
+INFO: The AXI interface is AXI4 Lite interface.
+ 
+INFO:EDK - 
+INFO: In this mode, the core is backward compatible with the axi_quad_spi_v1_00_a core in register mapping.
+ 
+INFO:EDK - 
+INFO: This is Legacy mode of the core and 0 will not affect the core configuration.
+ 
+INFO:EDK - 
+INFO: The FIFO depth for AXI Quad SPI core instance is chosen as 16.
+ 
+INFO:EDK - 
+INFO: With present configuration, the AXI Quad SPI core's PORT SPISEL is connected to net_vcc. 
+INFO:EDK - 
+INFO: To make the core operating in the master mode, make sure that the mst_n_slv bit is configured to logic 1 in SPICR settings. 
+INFO:EDK - 
+INFO: The STARTUP primitive is not used in the AXI Quad SPI core configuration.
+ 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet_Lite - This design requires design constraints to guarantee performance.
+Please refer to the data sheet for details.  
+The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation. - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\system.mhs line 338
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding PARAMETER C_LMB_NUM_SLAVES value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data\lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is overriding PARAMETER C_MEMSIZE value to 0x4000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 78 
+Error in overriding syslevel props. 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 13 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 2 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: CLK_P, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\_xps_tempmhsfilename.mhs line 58 
+WARNING:EDK:4181 - PORT: CLK_N, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\_xps_tempmhsfilename.mhs line 59 
+
+Performing Clock DRCs...
+INFO:EDK:4060 - INSTANCE: microblaze_0, PARAMETER: C_FREQ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: RS232_Uart_1, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_SFP, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_EEPROM, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_DVI, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: Ethernet_Lite, PARAMETER: C_S_AXI_ACLK_PERIOD_PS - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+ERROR:EDK - C_MEMCLK_PERIOD (IPNAME:axi_s6_ddrx, INSTANCE:MCB_DDR3) - can't use empty string as operand of "/" 
+ERROR:EDK:4114 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3 - error computing override value for C_MEMCLK_PERIOD using tcl - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 162 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+Assigned Driver axidma 7.02.a for instance axi_dma_0
+axi_dma_0 has been added to the project
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_dma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_dma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Assigned Driver axicdma 2.03.a for instance axi_cdma_0
+axi_cdma_0 has been added to the project
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_cdma, INSTANCE: axi_cdma_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_cdma, INSTANCE: axi_cdma_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_dma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_dma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+
+Running DRCs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi4_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_4Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_4Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x40800000-0x4080ffff) IIC_SFP	axi4lite_0
+  (0x40820000-0x4082ffff) IIC_EEPROM	axi4lite_0
+  (0x40840000-0x4084ffff) IIC_DVI	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet_Lite	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x7de00000-0x7de0ffff) fp_adder_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR3	axi4_0
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: sysclk_2x_180 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3, PORT: pll_lock - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: proc_sys_reset, INSTANCE: fp_adder_0_reset_1, PORT: Dcm_locked - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_dma, INSTANCE: axi_dma_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+
+
+WARNING:EDK:2137 - Peripheral axi_dma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+
+
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Error in overriding syslevel props. 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 13 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 2 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: CLK_P, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\system.mhs line 58 
+WARNING:EDK:4181 - PORT: CLK_N, CONNECTOR: CLK - floating connection - D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\system.mhs line 59 
+WARNING:EDK:4181 - PORT: mm2s_prmry_reset_out_n, CONNECTOR: RESET_OUT_N - floating connection - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data\axi_dma_v2_1_0.mpd line 221 
+WARNING:EDK:4181 - PORT: mm2s_cntrl_reset_out_n, CONNECTOR: RESET_OUT_N - floating connection - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data\axi_dma_v2_1_0.mpd line 230 
+WARNING:EDK:4181 - PORT: s2mm_prmry_reset_out_n, CONNECTOR: RESET_OUT_N - floating connection - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data\axi_dma_v2_1_0.mpd line 253 
+WARNING:EDK:4181 - PORT: s2mm_sts_reset_out_n, CONNECTOR: RESET_OUT_N - floating connection - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data\axi_dma_v2_1_0.mpd line 262 
+
+Performing Clock DRCs...
+INFO:EDK:4060 - INSTANCE: microblaze_0, PARAMETER: C_FREQ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: RS232_Uart_1, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_SFP, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_EEPROM, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: IIC_DVI, PARAMETER: C_S_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: Ethernet_Lite, PARAMETER: C_S_AXI_ACLK_PERIOD_PS - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: axi_cdma_0, PARAMETER: C_M_AXI_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: axi_cdma_0, PARAMETER: C_S_AXI_LITE_ACLK_FREQ_HZ - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is overriding PARAMETER C_MASK value to 0x40000000 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3_10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_D_AXI value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_ADDR_TAG_BITS value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_DCACHE_ADDR_TAG value to 14 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding PARAMETER C_USE_EXT_NM_BRK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\data\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 1 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding PARAMETER C_RANGE_CHECK value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+ERROR:EDK - C_MEMCLK_PERIOD (IPNAME:axi_s6_ddrx, INSTANCE:MCB_DDR3) - can't use empty string as operand of "/" 
+ERROR:EDK:4114 - IPNAME: axi_s6_ddrx, INSTANCE: MCB_DDR3 - error computing override value for C_MEMCLK_PERIOD using tcl - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 162 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S0_AXI_STRICT_COHERENCY value to 0 - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 164 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:MCB_DDR3 - tcl is overriding PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F - E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+Overriding Xilinx file <TextEditor.cfg> with local file <E:/14.7/ISE_DS/EDK/data/TextEditor.cfg>
+Writing filter settings....
+Done writing filter settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\system.filters
+Done writing Tab View settings to:
+	D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\etc\system.gui

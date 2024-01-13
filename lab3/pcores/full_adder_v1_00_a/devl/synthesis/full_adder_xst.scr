@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "D:\ITI_internship\FPGA\lab3\pcores\full_adder_v1_00_a\devl\synthesis\full_adder_xst.prj"
+-top full_adder
+-p virtex6
+-ofn "D:\ITI_internship\FPGA\lab3\pcores\full_adder_v1_00_a\devl\synthesis\full_adder_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib full_adder_v1_00_a

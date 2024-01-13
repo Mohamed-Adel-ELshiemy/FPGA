@@ -1,0 +1,14 @@
+set -tmpdir D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\synthesis\xst_temp_dir\
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc6slx45tfgg484-3
+-top fp_addation_unit_iic_dvi_wrapper
+-ifmt MIXED
+-ifn fp_addation_unit_iic_dvi_wrapper_xst.prj
+-ofn ../implementation/fp_addation_unit_iic_dvi_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio\pcores\" "E:\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "E:\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }

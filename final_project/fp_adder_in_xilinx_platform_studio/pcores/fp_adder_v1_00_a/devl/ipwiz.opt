@@ -1,0 +1,10 @@
+-batch 
+-create fp_adder 
+-ver 1.00.a 
+-dir "D:\ITI_internship\FPGA\final_project\fp_adder_in_xilinx_platform_studio" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 3 
+-xps 
+-ise 
+-driver 
